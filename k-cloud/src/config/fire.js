@@ -33,7 +33,7 @@ export  const database ={
   },
   getCurrentTimestamp: firebase.firestore.FieldValue.serverTimestamp
 }
-
+export const storage = firebase.storage()
 
 // export { auth, db,firebaseApp };
 export default firebase;

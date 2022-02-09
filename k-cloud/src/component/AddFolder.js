@@ -2,7 +2,6 @@ import React,{useState} from "react";
 import { RiFolderAddLine } from "react-icons/ri";
 import {Button,Modal,Form} from 'react-bootstrap';
 import { database } from "../config/fire";
-// import firebase from "../config/fire";?
 import { ROOT_FOLDER } from '../folder/useFolder'
 
 
@@ -37,9 +36,12 @@ function handleSubmit(e){
 }
     return(
         <>
+        <div style={{marginRight:"10px",paddingTop:"10px"}}>
         <Button onClick={openHandler} variant='outline-success' size='sm' >
-            <RiFolderAddLine/>
+            <RiFolderAddLine style={{
+                width:"30px",height:"30px"}}/>
         </Button>
+        </div>
         <Modal show={open} onHide={closeHandler}>
             <Form onSubmit={handleSubmit}>
                 <Modal.Body>
